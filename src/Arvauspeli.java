@@ -6,9 +6,10 @@ public class Arvauspeli {
 		
 		Scanner in = new Scanner(System.in);
 		
-		// right answer & guess
 		String rightAnswer = "Mini";
 		String guess = "";
+		String stop = "exit";
+		int counter = 0;
 		
 		do
 		{
@@ -17,17 +18,25 @@ public class Arvauspeli {
 		guess = in.nextLine();
 		
 		// if right or wrong answer
+			if (guess.equalsIgnoreCase(stop))
+			{
+			System.out.println("Maybe next time.");
+			break;
+			}
+			counter++;
 			if (guess.equalsIgnoreCase(rightAnswer))
 			{
 				System.out.println("That's right!\nCongratulations!");
+				break;
 			}
 			else
 			{
-				System.out.println("Wrong! Try again.");
+				System.out.println("Wrong! Try again or type \"exit\".");
 			}
 		
-		} while (!guess.equalsIgnoreCase(rightAnswer));
-			
+		} while (true);
+		
+		System.out.println("Total guesses: " + counter);
 		
 
 	}
