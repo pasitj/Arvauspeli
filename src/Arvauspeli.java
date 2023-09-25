@@ -10,20 +10,23 @@ public class Arvauspeli {
 		String rightAnswer = "Mini";
 		String guess = "";
 		
+		do
+		{
 		// ask guestion
 		System.out.println("Guess the right car brand.");
 		guess = in.nextLine();
 		
-		// if right answer
-		if (guess.equalsIgnoreCase(rightAnswer))
-		{
-			System.out.println("That's right!\nCongratulations!");
-		}
-		else
-		{
-			System.out.println("Wrong!");
-		}
+		// if right or wrong answer
+			if (guess.equalsIgnoreCase(rightAnswer))
+			{
+				System.out.println("That's right!\nCongratulations!");
+			}
+			else
+			{
+				System.out.println("Wrong! Try again.");
+			}
 		
+		} while (!guess.equalsIgnoreCase(rightAnswer));
 			
 		
 
