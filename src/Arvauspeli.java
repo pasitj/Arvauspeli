@@ -11,10 +11,12 @@ public class Arvauspeli {
 		String stop = "exit";
 		int counter = 0;
 		
+		System.out.println("Guess the right car brand. You got help at round 3 and 6.");
+		
 		do
 		{
 		// ask guestion
-		System.out.println("Guess the right car brand.");
+		//System.out.println("Guess the right car brand.");
 		guess = in.nextLine();
 		
 		// if right or wrong answer
@@ -28,6 +30,14 @@ public class Arvauspeli {
 			{
 				System.out.println("That's right!\nCongratulations!");
 				break;
+			}
+			if (counter == 3)
+			{
+				System.out.println("There is four letters.");
+			}
+			if (counter == 6)
+			{
+				System.out.println("First letter is \"M\".");
 			}
 			else
 			{
